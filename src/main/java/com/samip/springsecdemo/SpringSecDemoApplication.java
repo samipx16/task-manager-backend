@@ -1,13 +1,13 @@
-package com.samip.task_manager_backend;
+package com.samip.springsecdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskManagerBackendApplication {
+public class SpringSecDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskManagerBackendApplication.class, args);
+		SpringApplication.run(SpringSecDemoApplication.class, args);
 	}
 
 }

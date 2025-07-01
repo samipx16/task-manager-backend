@@ -1,10 +1,8 @@
-package com.samip.task_manager_backend.controller;
+package com.samip.springsecdemo.controller;
 
-
-import com.samip.task_manager_backend.model.User;
-import com.samip.task_manager_backend.service.JwtService;
-import com.samip.task_manager_backend.service.UserService;
+import com.samip.springsecdemo.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -13,8 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.samip.springsecdemo.model.User;
+import com.samip.springsecdemo.service.UserService;
+
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin("*")
 public class UserController {
 
 	@Autowired
@@ -27,16 +28,21 @@ public class UserController {
 	private JwtService jwtService;
 	
 	@PostMapping("register")
-	public User register(@RequestBody User user) {
-	  return service.registerUser(user);
+	public ResponseEntity<?> register(@RequestBody User user) {
+		try{
+			User savedUser = service.saveUser(user);
+			return ResponseEntity.ok("User registered successfully");
+		}catch  (RuntimeException e) {
+			return ResponseEntity.badRequest().body(e.getMessage());
+		}
 	}
 
 	@PostMapping("login")
 	public String login(@RequestBody User user){
 		Authentication authentication = authenticationManager
-				.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(),user.getPassword()));
+				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword()));
 		if(authentication.isAuthenticated())
-			return jwtService.generateToken(user.getEmail());
+			return jwtService.generateToken(user.getUsername());
 		else
 			return"login failed";
 	}

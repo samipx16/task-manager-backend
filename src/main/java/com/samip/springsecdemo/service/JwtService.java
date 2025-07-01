@@ -1,4 +1,4 @@
-package com.samip.task_manager_backend.service;
+package com.samip.springsecdemo.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

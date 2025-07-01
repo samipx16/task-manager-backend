@@ -1,19 +1,18 @@
-package com.samip.task_manager_backend.model;
+package com.samip.springsecdemo.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
-@Data
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tasks")
 public class Task {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int taskId;
@@ -24,6 +23,6 @@ public class Task {
     private Date dueDate;
 
     @ManyToOne
-    @JoinColumn(name = "user_email", referencedColumnName = "email") // foreign key
+    @JoinColumn(name = "user_id")// FK to User entity
     private User user;
 }
