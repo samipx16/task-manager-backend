@@ -1,6 +1,6 @@
-package com.samip.springsecdemo.controller;
+package com.samip.taskManagerBackend.controller;
 
-import com.samip.springsecdemo.service.JwtService;
+import com.samip.taskManagerBackend.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.samip.springsecdemo.model.User;
-import com.samip.springsecdemo.service.UserService;
+import com.samip.taskManagerBackend.model.User;
+import com.samip.taskManagerBackend.service.UserService;
 
 @RestController
 @CrossOrigin("*")

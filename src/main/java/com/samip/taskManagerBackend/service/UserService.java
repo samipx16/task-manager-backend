@@ -1,11 +1,11 @@
-package com.samip.springsecdemo.service;
+package com.samip.taskManagerBackend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.samip.springsecdemo.dao.UserRepo;
-import com.samip.springsecdemo.model.User;
+import com.samip.taskManagerBackend.dao.UserRepo;
+import com.samip.taskManagerBackend.model.User;
 
 @Service
 public class UserService {

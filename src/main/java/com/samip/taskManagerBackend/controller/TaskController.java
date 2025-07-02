@@ -1,13 +1,13 @@
-package com.samip.springsecdemo.controller;
+package com.samip.taskManagerBackend.controller;
 
-import com.samip.springsecdemo.model.Task;
-import com.samip.springsecdemo.model.User;
-import com.samip.springsecdemo.service.TaskService;
-import com.samip.springsecdemo.service.UserService;
+import com.samip.taskManagerBackend.model.Task;
+import com.samip.taskManagerBackend.model.User;
+import com.samip.taskManagerBackend.service.TaskService;
+import com.samip.taskManagerBackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import com.samip.springsecdemo.model.UserPrincipal;
+import com.samip.taskManagerBackend.model.UserPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;

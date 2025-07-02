@@ -1,8 +1,7 @@
-package com.samip.springsecdemo.service;
+package com.samip.taskManagerBackend.service;
 
-import com.samip.springsecdemo.dao.TaskRepo;
-import com.samip.springsecdemo.model.Task;
-import com.samip.springsecdemo.model.User;
+import com.samip.taskManagerBackend.dao.TaskRepo;
+import com.samip.taskManagerBackend.model.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

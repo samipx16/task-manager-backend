@@ -1,7 +1,7 @@
-package com.samip.springsecdemo.config;
+package com.samip.taskManagerBackend.config;
 
-import com.samip.springsecdemo.service.JwtService;
-import com.samip.springsecdemo.service.MyUserDetailsService;
+import com.samip.taskManagerBackend.service.JwtService;
+import com.samip.taskManagerBackend.service.MyUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

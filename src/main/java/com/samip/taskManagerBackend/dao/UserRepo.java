@@ -1,9 +1,9 @@
-package com.samip.springsecdemo.dao;
+package com.samip.taskManagerBackend.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.samip.springsecdemo.model.User;
+import com.samip.taskManagerBackend.model.User;
 @Repository
 public interface UserRepo extends JpaRepository<User, Integer> {
 

@@ -1,6 +1,5 @@
-package com.samip.springsecdemo.model;
+package com.samip.taskManagerBackend.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 

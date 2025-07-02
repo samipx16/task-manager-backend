@@ -1,6 +1,6 @@
-package com.samip.springsecdemo.dao;
+package com.samip.taskManagerBackend.dao;
 
-import com.samip.springsecdemo.model.Task;
+import com.samip.taskManagerBackend.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

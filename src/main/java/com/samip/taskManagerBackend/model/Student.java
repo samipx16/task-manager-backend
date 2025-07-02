@@ -1,4 +1,4 @@
-package com.samip.springsecdemo.model;
+package com.samip.taskManagerBackend.model;
 
 import jakarta.persistence.GeneratedValue;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.samip.springsecdemo.service;
+package com.samip.taskManagerBackend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -8,9 +8,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.samip.springsecdemo.dao.UserRepo;
-import com.samip.springsecdemo.model.User;
-import com.samip.springsecdemo.model.UserPrincipal;
+import com.samip.taskManagerBackend.dao.UserRepo;
+import com.samip.taskManagerBackend.model.User;
+import com.samip.taskManagerBackend.model.UserPrincipal;
 
 @Service
 public class MyUserDetailsService implements UserDetailsService {

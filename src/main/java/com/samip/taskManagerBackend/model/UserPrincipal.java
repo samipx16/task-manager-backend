@@ -1,4 +1,4 @@
-package com.samip.springsecdemo.model;
+package com.samip.taskManagerBackend.model;
 
 import java.util.Collection;
 import java.util.Collections;
